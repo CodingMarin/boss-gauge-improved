@@ -4,7 +4,11 @@ class ZBossGaugeEffect : public ZScreenEffect
         virtual bool Draw(unsigned long int nTime, MDrawContext* pDC);
 };
 
-class ZScreenEffectManager : public ZEffectList {
+class ZScreenEffectManager : public ZEffectList
+{
+    protected:
+	    void DrawQuestEffects(MDrawContext* pDC);
+
     public:
         void Draw(MDrawContext* pDC);
 };
